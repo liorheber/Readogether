@@ -1,43 +1,22 @@
 <?php
 
-class user {
+class Server {
 
-    var $number;
-    var $name;
-    var $privileges;
+    var $db;
+    var $numOfUsers;
+    var $users = array();
+    var $currentWord;
+    var $currentAdmin;
 
-    public function updateStatus();
-
-    private function connectToServer() {
-        if (isNewServer()) {
-            $server = createNewServer();
+    function __construct($name) {
+        $this->db = fopen('./db/db', 'r');
+        $this->numOfUsers = fgets($this->db);
+        if ($this->numOfUsers === '0') {
+            $this->currentAdmin = $name;
         }
-    }
-
-    public function newUser($user, $name, $server) {
-        $user->number = $server->numOfUsers + 1;
-        $user->name = $name;
-        if ($server->admin) {
-            $user->privileges = 'reader';
-        } else {
-            $user->privileges = 'speaker';
-            $server->admin = true;
-        }
-        return $user;
-    }
-
-    public function currentWord($operation, $word) {
-        switch ($operation) {
-            case 'update':
-                $currentWord = $word;
-                return true;
-                break;
-            case 'where':
-                return $currentWord;
-                break;
-        }
-        return false;
+        $this->users[$this->numOfUsers] = $name;
+        $this->numOfUsers++;
+        $this->currentAdmin = 0;
     }
 
 }
-
