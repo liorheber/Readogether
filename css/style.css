@@ -1,0 +1,47 @@
+html { 
+}
+body {
+    padding: 0px;
+    margin: 0px;
+    font-family: "Segoe UI","Segoe UI Web Regular","Segoe UI Symbol","Helvetica Neue","BBAlpha Sans","S60 Sans",Arial,"sans-serif";
+}
+
+root { 
+    display: block;
+}
+
+header{
+    height:5em;
+    width: 100%;
+    background-color: #bcd930;
+}
+#title {
+
+}
+
+#title h2{
+    padding: 0px;
+    margin: 0px;
+    color: white;
+    font-size: 3.5em;
+    display: inline-block;
+    float: left;
+}
+
+#icon {
+    height: 100%;
+    width:auto;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    float: left;
+}
+
+#toolsIcon {
+    height: 100%;
+    width:auto;
+    margin: 0px;
+    padding: 0px;
+    display: inline-block;
+    float: right;
+}

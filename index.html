@@ -1,15 +1,30 @@
-<!DOCTYPE html>
 <html>
-<head>
-  <style>
-  p { color:red; margin:5px; cursor:pointer; }
-  p:hover { background:yellow; }
-  </style>
-  <script src="js/jquery-2.0.1.js"></script>
-  <script src="js/jquery.hammer.js"></script>
-  <script src="js/client.js"></script>
-</head>
-<body>
-  <p id="swipeTest">Swipe</p>
-</body>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="icon" type="image/png" href="img/book.png">
+        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+        <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+        <title>Readogether</title>
+    </head>
+    <body>
+        <header>
+            <div id="title">
+                <img src="img/book.png" id="icon" />
+                <h2 id="titleName">Readogether</h2>
+                <a href="#" id="tools"><img src="img/tools.png" id="toolsIcon" /></a>
+            </div>
+        </header>
+        <article>
+            <div id="log-in">
+                <h1>ברוך הבא ל- Readogether </h1>
+                <p> אנא הכנס את שמך כדי להצטרף לקריאה</p>
+                <form id="nameInput">
+                    <input type="text" id="name" />
+                    <input type="submit" />
+                </form>
+            </div>
+            <div id="book" hidden></div>
+        </article>
+    </body>
 </html>

@@ -1,0 +1,6 @@
+<h1>ברוך הבא ל- Readogether </h1>
+<p> אנא הכנס את שמך כדי להצטרף לקריאה</p>
+<form id="nameInput">
+<input type="text" id="name" />
+<input type="submit" />
+</form>
