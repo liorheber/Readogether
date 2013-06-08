@@ -1,3 +1,7 @@
+admin = false;
+currentWord = 0;
+name = "";
+
 function getBook() {
     $.ajax({
         type: "GET",
@@ -34,7 +38,7 @@ function getCurrentWord() {
 }
 
 function addUser() {
-    var name = $("#name").val();
+    name = $("#name").val();
     if (name === "") {
         alert("אנא הכנס שם");
     } else {
@@ -44,9 +48,22 @@ function addUser() {
             dataType: "json",
             success: function(data) {
                 userList = data;
+                if (userList[0] === name) {
+                    admin = true;
+                } else {
+                    admin = false;
+                }
                 getBook();
-                getCurrentWord();
+                currentWord = getCurrentWord();
             }
-        });
+        });a
     }
+}
+
+window.onbeforeunload = function() {
+  $.ajax({
+            type: "GET",
+            url: "bin/Server.php?action=leave&name=" + name,
+            dataType: "json"
+  });
 }
