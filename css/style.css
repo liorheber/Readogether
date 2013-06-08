@@ -54,3 +54,16 @@ header{
     display: inline-block;
     
 }
+
+#book{
+    padding: 2px;
+    margin-right: 0px;
+    color: black;
+    font-size: 3.5em;
+    display: inline-block;
+}
+
+#log-in{
+    text-align: center;
+    font-size: 150%;
+}

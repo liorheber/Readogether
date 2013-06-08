@@ -1,12 +1,13 @@
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" dir='rtl'>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/style.css">
-        <link rel="icon" type="image/png" href="img/book.png">
-        <script src="js/jquery-2.0.1.js"></script>
-        <script src="js/jquery-ui.js"></script>
-        <script src="js/jquery.hammer.js"></script>
-        <script src="js/client.js"></script>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
+        <link rel="icon" type="image/png" href="img/book.png" />
+        <script type="text/javascript" src="js/jquery-2.0.1.js"></script>
+        <script  type="text/javascript" src="js/jquery-ui.js"></script>
+        <script type="text/javascript" src="js/jquery.hammer.js"></script>
+        <script type="text/javascript" src="js/client.js"></script>
         <title>Readogether</title>
     </head>
     <body>
@@ -21,19 +22,13 @@
             <div id="log-in">
                 <h1>ברוך הבא ל- Readogether </h1>
                 <p> אנא הכנס את שמך כדי להצטרף לקריאה</p>
-                <form id="nameInput">
-                    <input type="text" id="name" />
-                    <input type="submit" />
+                <form id="nameInput" action='#'>
+                    <input type="text" id="name" name='name'/>
+                    <input type="button" value="הכנס" onclick="addUser();" />
                 </form>
             </div>
-            <div id="book" hidden></div>
-            <div >
-                <a class="text" data-message="1">ויאמר</a>
-                <a class="text" data-message="2">אלוהים</a>
-                <a class="text" data-message="3">זה</a>
-                <a class="text" data-message="4">התוכנה</a>
-                <a class="text" data-message="5">הכי</a>
-                <a class="text" data-message="6">טובה</a>
+            <div id="book">
+                
             </div>
         </article>
     </body>
